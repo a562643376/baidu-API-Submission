@@ -1,0 +1,10 @@
+使用说明：
+百度API自动提交URL脚本，首次输入时需要填写完整的百度接口调用地址(访问 https://ziyuan.baidu.com/linksubmit/index 获取)并回车
+
+模式1
+输入单个URL进行提交
+
+模式2
+在sitemap.txt中写入你的url（一行一条）并保存，在脚本执行过程中选择2并回车完成自动提交
+
+更多推广服务咨询微信：liangding562643376
