@@ -26,15 +26,30 @@ tests/
 
 本地运行时目录 dataset、checkpoints、reports 默认不提交 Git。
 
-## Cookie 与状态文件
+## URL 状态与 Cookie
 
-仓库当前为公开仓库。真实 Cookie 包含登录会话凭据，所以不能写入 Git 历史。
+已经从你上传的状态 JSON 中提取并提交了一份脱敏运行状态：
+
+data/baidu-submit-urls.json
+
+它保留：
+- root_sitemaps
+- 顶层 urls
+- index
+- completed
+- skipped
+- current_url
+- status
+
+不会把 sitemap_cache、网络信息等运行环境数据写进仓库。
+
+真实 Cookie 包含登录会话凭据，而当前仓库是公开仓库，所以不能把真实 Cookie 写入 Git 历史。
 
 本地放置：
-data/cookies.json
-data/baidu-manual-submit-state.json
 
-这两个路径已经加入 .gitignore。仓库只提供 cookies.example.json 和 submit-state.example.json。
+data/cookies.json
+
+这个路径已经加入 .gitignore。仓库提供 data/cookies.example.json 作为格式模板。
 
 ## 采集一条自有测试图片样本
 
@@ -58,7 +73,9 @@ python predict_orientation.py predict --image test.png --model checkpoints/best.
 
 ## 百度人工验证提交
 
-python manual_submit.py
+如果要直接用仓库里的 URL 状态：
+
+python manual_submit.py --state data/baidu-submit-urls.json --cookies data/cookies.json
 
 规则：
 - sitemap 只作为 URL 发现来源；
