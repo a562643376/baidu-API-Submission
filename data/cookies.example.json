@@ -1,0 +1,17 @@
+{
+  "savedAt": "2026-09-21T00:00:00+08:00",
+  "source": "manual-export",
+  "cookies": [
+    {
+      "name": "EXAMPLE_ONLY",
+      "value": "REPLACE_LOCALLY_DO_NOT_COMMIT_REAL_SESSION_VALUES",
+      "domain": "ziyuan.baidu.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

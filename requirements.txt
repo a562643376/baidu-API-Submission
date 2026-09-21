@@ -1,0 +1,5 @@
+torch>=2.4
+torchvision>=0.19
+pillow>=10
+playwright>=1.47
+pytest>=8

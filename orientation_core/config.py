@@ -1,0 +1,15 @@
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_DATASET_DIR = PROJECT_ROOT / "dataset"
+DEFAULT_CHECKPOINT_DIR = PROJECT_ROOT / "checkpoints"
+DEFAULT_REPORT_DIR = PROJECT_ROOT / "reports"
+
+DEFAULT_INPUT_SIZE = 224
+DEFAULT_BACKBONE = "resnet18"
+
+FIRST_TRAIN_AT = 100
+RETRAIN_EVERY = 50
+
+IMAGENET_MEAN = (0.485, 0.456, 0.406)
+IMAGENET_STD = (0.229, 0.224, 0.225)
